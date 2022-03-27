@@ -5,8 +5,8 @@
 import React from 'react'
 import AgentResolver from './src/nu_modules/layout/containers'
 
-const SEO = ({ type, opt, children }) => {
-  return <AgentResolver type={type} opt={opt} subAgent={children} />
+const SEO = ({ opt }) => {
+  return <AgentResolver opt={opt} />
 }
 
 export default SEO
