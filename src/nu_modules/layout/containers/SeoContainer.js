@@ -28,46 +28,42 @@ function SeoContainer({
     themeColor,
     keywords,
   } = brandYAML
-  const metaDescription = description
   return (
     <Seo
-      lang={lang}
-      title={titleSeo || businessName}
-      siteTitle={businessName}
-      url={url}
-      metaDescription={metaDescription}
-      description={description}
-      siteUrl={url}
-      image={featuredImage || image}
-      organizationLogo={mainLogo}
-      author={authorSeo || businessName}
-      organization={businessName}
-      social={social}
-      datePublished={datePublished}
-      dateCreated={dateCreated}
-      schemaType={schemaType}
-      socialSameAs={social}
-      blogListing={blogListing}
-      articleBody={articleBody}
-      keywords={keywords}
+      title={titleSeo || businessName || null}
+      siteTitle={businessName || null}
+      metaDescription={description || null}
+      image={featuredImage || image || null}
       cardImage={cardImage || null}
-      serverUrl={url || serverUrl}
-      themeColor={themeColor}
+      organizationLogo={mainLogo || null}
+      description={description || null}
+      author={authorSeo || businessName || null}
+      organization={businessName || null}
+      keywords={keywords || null}
+      themeColor={themeColor || null}
+      lang={lang || null}
+      social={social || null}
+      socialSameAs={social || null}
+      datePublished={datePublished || null}
+      dateCreated={dateCreated || null}
+      schemaType={schemaType || null}
+      blogListing={blogListing || null}
+      articleBody={articleBody || null}
+      url={url || null}
+      siteUrl={url || null}
+      serverUrl={url || serverUrl || null}
     />
   )
 }
 
 SeoContainer.defaultProps = {
   lang: `pt-br`,
-  meta: [],
-  description: ``,
 }
 
 SeoContainer.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  // meta: PropTypes.arrayOf(PropTypes.object),
+  // title: PropTypes.string.isRequired,
 }
 
 export default SeoContainer
