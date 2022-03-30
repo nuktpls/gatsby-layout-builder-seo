@@ -1,6 +1,6 @@
 {
   "name": "gatsby-layout-builder-seo",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "index.js",
   "description": "Gatsby Layout Builder - SEO.",
   "author": "Milton Bolonha <miltonbolonha@gmail.com>",

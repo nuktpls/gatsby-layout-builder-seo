@@ -5,8 +5,8 @@
 import React from 'react'
 import SeoAgentResolver from './src/nu_modules/layout/containers'
 
-const Seo = ({ opt }) => {
+const SeoContainer = ({ opt }) => {
   return <SeoAgentResolver opt={opt} />
 }
 
-export default Seo
+export default SeoContainer
