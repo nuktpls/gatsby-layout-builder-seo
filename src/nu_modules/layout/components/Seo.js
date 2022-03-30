@@ -27,6 +27,10 @@ const Seo = ({
   url,
   siteUrl,
   serverUrl,
+  brandName,
+  brandUrl,
+  brandPhone,
+  brandEmail,
 }) => {
   const hasBar = serverUrl?.charAt(serverUrl.length - 1)
   const servBar = hasBar === '/' ? serverUrl?.slice(0, -1) : serverUrl
@@ -80,6 +84,13 @@ const Seo = ({
         url={siteUrl}
         siteUrl={siteUrl}
         serverUrl={serverUrl}
+        brandName={brandName}
+        brandUrl={brandUrl}
+        telephone={brandPhone}
+        email={brandEmail}
+        inLanguage={lang}
+        keywordsSchema={keywords}
+        sameAs={socialSameAs}
       />
     </>
   )
