@@ -3,10 +3,10 @@
 */
 
 import React from 'react'
-import AgentResolver from './src/nu_modules/layout/containers'
+import SeoAgentResolver from './src/nu_modules/layout/containers'
 
-const SEO = ({ opt }) => {
-  return <AgentResolver opt={opt} />
+const Seo = ({ opt }) => {
+  return <SeoAgentResolver opt={opt} />
 }
 
-export default SEO
+export default Seo
