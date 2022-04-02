@@ -9,12 +9,12 @@ require("core-js/modules/es.symbol.description.js");
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Seo = _interopRequireDefault(require("./Seo"));
+var _Seo = _interopRequireDefault(require("../components/Seo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import PropTypes from 'prop-types'
-const LayoutResolver = _ref => {
+const SeoResolver = _ref => {
   let {
     opt
   } = _ref;
@@ -69,15 +69,15 @@ const LayoutResolver = _ref => {
     brandPhone: brandPhone,
     brandEmail: brandEmail
   });
-}; // LayoutResolver.defaultProps = {
+}; // SeoResolver.defaultProps = {
 //   lang: `pt-br`,
 // }
-// LayoutResolver.propTypes = {
+// SeoResolver.propTypes = {
 //   lang: PropTypes.string,
 //   // meta: PropTypes.arrayOf(PropTypes.object),
 //   // title: PropTypes.string.isRequired,
 // }
 
 
-var _default = LayoutResolver;
+var _default = SeoResolver;
 exports.default = _default;
