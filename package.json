@@ -20,7 +20,7 @@
     "builder"
   ],
   "scripts": {
-    "test": "nyc mocha --require babel-core/register",
+    "test": "echo \"No test specified\"",
     "build": "npm run build -w demo",
     "clean": "npm run clean -w demo",
     "develop": "npm run develop -w demo",
