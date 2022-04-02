@@ -31,6 +31,7 @@
     "@nuktpls:registry": "https://npm.pkg.github.com"
   },
   "release": {
+    "branch": "origin/master",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -45,10 +46,23 @@
       "@semantic-release/github"
     ]
   },
+  "verifyConditions": [
+    {
+      "path": "semantic-release-verify-deps",
+      "dependencies": true,
+      "devDependencies": false,
+      "regExps": [
+        "\\D$"
+      ]
+    }
+  ],
   "dependencies": {
     "@changesets/cli": "^2.22.0"
   },
   "devDependencies": {
     "@semantic-release/npm": "^9.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/nuktpls/gatsby-layout-builder-seo/issues"
   }
 }

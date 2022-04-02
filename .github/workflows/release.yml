@@ -26,12 +26,12 @@ jobs:
 
       # Build the site
       - name: Install npm packages
-        run: npm install
+        run: npm ci
       - name: Build NÜ-SEO plugin
         run: npm run build -w gatsby-plugin-nu-seo
       - name: Release v.
+        run: npx semantic-release
         env:
           PREFIX_PATHS: true
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
