@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "Github Workflow",
+			"path": ".github/workflows/"
+		},{
+			"name": "Demo",
+			"path": "demo"
+		},
+		{
+			"name": "Comp&Containers",
+			"path": "gatsby-plugin-nu-seo/src/lib/nu_modules"
+		},
+		{
+			"name": "NÜSEO - Plugin",
+			"path": "gatsby-plugin-nu-seo/"
+		},
+		{
+			"name": "Módulo",
+			"path": "gatsby-plugin-nu-seo/src/lib/"
+		},
+		{
+			"name": "Root",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
