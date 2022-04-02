@@ -20,10 +20,14 @@
     "builder"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc mocha --require babel-core/register",
     "build": "npm run build -w demo",
     "clean": "npm run clean -w demo",
     "develop": "npm run develop -w demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuktpls/gatsby-layout-builder-seo.git"
   },
   "license": "MIT",
   "publishConfig": {
@@ -31,7 +35,6 @@
     "@nuktpls:registry": "https://npm.pkg.github.com"
   },
   "release": {
-    "branch": "origin/master",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -60,7 +63,8 @@
     "@changesets/cli": "^2.22.0"
   },
   "devDependencies": {
-    "@semantic-release/npm": "^9.0.1"
+    "@semantic-release/npm": "^9.0.1",
+    "nyc": "^15.1.0"
   },
   "bugs": {
     "url": "https://github.com/nuktpls/gatsby-layout-builder-seo/issues"
