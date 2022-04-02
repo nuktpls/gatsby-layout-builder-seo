@@ -37,7 +37,9 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "gatsby-plugin-nu-seo"
+          "pkgRoot": "gatsby-plugin-nu-seo",
+          "npmPublish": true,
+          "tarballDir": "gatsby-plugin-nu-seo/dist"
         }
       ],
       "@semantic-release/github"
@@ -45,5 +47,8 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.22.0"
+  },
+  "devDependencies": {
+    "@semantic-release/npm": "^9.0.1"
   }
 }
