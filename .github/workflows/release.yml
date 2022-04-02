@@ -20,17 +20,17 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependencies
-        run: npm i
+      # Update npm to latest
+      - name: Update npm to latest
+        run: npm install -g npm@latest
 
-      - name: Create release pull request or publish to npm
-        id: changesets
-        uses: changesets/action@master
-        with:
-            title: Release Tracking
-            # This expects you to have a script called release which does a build for your packages and calls changeset publish
-            publish: yarn release
+      # Build the site
+      - name: Install npm packages
+        run: npm install
+      - name: Build documentation
+        run: npm run build -w gatsby-plugin-nu-seo
+      - name: Release v.
         env:
+          PREFIX_PATHS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
