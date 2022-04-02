@@ -1,6 +1,6 @@
 import React from 'react'
-import SeoContainer from './SeoContainer'
-import PropTypes from 'prop-types'
+import Seo from './Seo'
+// import PropTypes from 'prop-types'
 
 const LayoutResolver = ({ opt }) => {
   const {
@@ -23,6 +23,8 @@ const LayoutResolver = ({ opt }) => {
     dateCreated,
     themeColor,
     keywords,
+    url,
+    image,
   } = opt
   return (
     <Seo
@@ -56,14 +58,14 @@ const LayoutResolver = ({ opt }) => {
   )
 }
 
-SeoContainer.defaultProps = {
-  lang: `pt-br`,
-}
+// LayoutResolver.defaultProps = {
+//   lang: `pt-br`,
+// }
 
-SeoContainer.propTypes = {
-  lang: PropTypes.string,
-  // meta: PropTypes.arrayOf(PropTypes.object),
-  // title: PropTypes.string.isRequired,
-}
+// LayoutResolver.propTypes = {
+//   lang: PropTypes.string,
+//   // meta: PropTypes.arrayOf(PropTypes.object),
+//   // title: PropTypes.string.isRequired,
+// }
 
 export default LayoutResolver

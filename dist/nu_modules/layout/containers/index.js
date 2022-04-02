@@ -9,12 +9,11 @@ require("core-js/modules/es.symbol.description.js");
 
 var _react = _interopRequireDefault(require("react"));
 
-var _SeoContainer = _interopRequireDefault(require("./SeoContainer"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _Seo = _interopRequireDefault(require("./Seo"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import PropTypes from 'prop-types'
 const LayoutResolver = _ref => {
   let {
     opt
@@ -38,9 +37,11 @@ const LayoutResolver = _ref => {
     social,
     dateCreated,
     themeColor,
-    keywords
+    keywords,
+    url,
+    image
   } = opt;
-  return /*#__PURE__*/_react.default.createElement(Seo, {
+  return /*#__PURE__*/_react.default.createElement(_Seo.default, {
     title: titleSeo || businessName || null,
     siteTitle: businessName || null,
     metaDescription: description || null,
@@ -68,15 +69,15 @@ const LayoutResolver = _ref => {
     brandPhone: brandPhone,
     brandEmail: brandEmail
   });
-};
+}; // LayoutResolver.defaultProps = {
+//   lang: `pt-br`,
+// }
+// LayoutResolver.propTypes = {
+//   lang: PropTypes.string,
+//   // meta: PropTypes.arrayOf(PropTypes.object),
+//   // title: PropTypes.string.isRequired,
+// }
 
-_SeoContainer.default.defaultProps = {
-  lang: "pt-br"
-};
-_SeoContainer.default.propTypes = {
-  lang: _propTypes.default.string // meta: PropTypes.arrayOf(PropTypes.object),
-  // title: PropTypes.string.isRequired,
 
-};
 var _default = LayoutResolver;
 exports.default = _default;

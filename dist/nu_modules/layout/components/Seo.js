@@ -43,7 +43,8 @@ const Seo = _ref => {
     brandName,
     brandUrl,
     brandPhone,
-    brandEmail
+    brandEmail,
+    summary_large_image
   } = _ref;
   const hasBar = serverUrl === null || serverUrl === void 0 ? void 0 : serverUrl.charAt(serverUrl.length - 1);
   const servBar = hasBar === '/' ? serverUrl === null || serverUrl === void 0 ? void 0 : serverUrl.slice(0, -1) : serverUrl;

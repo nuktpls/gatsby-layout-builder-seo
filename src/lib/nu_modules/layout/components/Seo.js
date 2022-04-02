@@ -31,6 +31,7 @@ const Seo = ({
   brandUrl,
   brandPhone,
   brandEmail,
+  summary_large_image,
 }) => {
   const hasBar = serverUrl?.charAt(serverUrl.length - 1)
   const servBar = hasBar === '/' ? serverUrl?.slice(0, -1) : serverUrl
