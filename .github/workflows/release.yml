@@ -26,7 +26,7 @@ jobs:
 
       # Build the site
       - name: Install npm packages
-        run: npm ci
+        run: npm i
       - name: Build NÜ-SEO plugin
         run: npm run build -w gatsby-plugin-nu-seo
       - name: Release v.
