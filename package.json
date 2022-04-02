@@ -64,6 +64,7 @@
     "@changesets/cli": "^2.22.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.8",
     "@semantic-release/npm": "^9.0.1",
     "nyc": "^15.1.0"
   },
