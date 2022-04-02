@@ -66,7 +66,7 @@ export default React.memo(
         description: brandDescription,
         url: brandUrl,
         potentialAction: 'Learning',
-        keywords: [keywords.map((e) => e)],
+        keywords: [keywords?.map((e) => e)],
         inLanguage: inLanguage,
         copyrightYear: new Date().getFullYear(),
         datePublished: dateCreated,

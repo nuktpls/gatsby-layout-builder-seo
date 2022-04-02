@@ -37,30 +37,30 @@ const Seo = ({
   const servBar = hasBar === '/' ? serverUrl?.slice(0, -1) : serverUrl
   const cardImagesrc = servBar + cardImage || servBar || cardImage
   const metaTags = [
-    { name: 'description', data: metaDescription },
-    { name: 'image', data: cardImagesrc || image },
-    { name: 'keywords', data: keywords.map((e) => e) },
-    { name: 'og:url', data: serverUrl },
-    { name: 'og:type', data: schemaType ? 'article' : 'blog' },
-    { name: 'og:title', data: title },
-    { name: 'og:description', data: description },
-    { name: 'og:image', data: cardImagesrc || image },
-    { name: 'fb:app_id', data: social.fbAppID },
-    { name: 'twitter:card', data: summary_large_image },
-    { name: 'twitter:creator', data: social.twitter },
-    { name: 'twitter:title', data: title },
-    { name: 'twitter:description', data: description },
-    { name: 'twitter:image:src', data: cardImagesrc || image },
-    { name: 'theme-color', data: themeColor || '#FF0081' },
-    { name: 'twitter:site', data: `@` + social.twitter },
-    { name: 'author', data: author },
+    { name: 'description', data: metaDescription || null },
+    { name: 'image', data: cardImagesrc || image || null },
+    { name: 'keywords', data: keywords?.map((e) => e) || null },
+    { name: 'og:url', data: serverUrl || null },
+    { name: 'og:type', data: schemaType ? 'article' : 'blog' || null },
+    { name: 'og:title', data: title || null },
+    { name: 'og:description', data: description || null },
+    { name: 'og:image', data: cardImagesrc || image || null },
+    { name: 'fb:app_id', data: social?.fbAppID || null },
+    { name: 'twitter:card', data: summary_large_image || null },
+    { name: 'twitter:creator', data: social?.twitter || null },
+    { name: 'twitter:title', data: title || null },
+    { name: 'twitter:description', data: description || null },
+    { name: 'twitter:image:src', data: cardImagesrc || image || null },
+    { name: 'theme-color', data: themeColor || '#FF0081' || null },
+    { name: 'twitter:site', data: `@` + social?.twitter || null },
+    { name: 'author', data: author || null },
   ]
   return (
     <>
       <Helmet htmlAttributes={{ lang }} titleTemplate={`%s | ${siteTitle}`}>
         <title>{title}</title>
         <link rel="canonical" href={serverUrl} />
-        {metaTags.map((meta, indx) => {
+        {metaTags?.map((meta, indx) => {
           if (!meta.data) {
             return null
           }
