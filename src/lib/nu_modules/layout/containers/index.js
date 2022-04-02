@@ -1,8 +1,8 @@
 import React from 'react'
-import Seo from './Seo'
+import Seo from '../components/Seo'
 // import PropTypes from 'prop-types'
 
-const LayoutResolver = ({ opt }) => {
+const SeoResolver = ({ opt }) => {
   const {
     datePublished,
     schemaType,
@@ -58,14 +58,14 @@ const LayoutResolver = ({ opt }) => {
   )
 }
 
-// LayoutResolver.defaultProps = {
+// SeoResolver.defaultProps = {
 //   lang: `pt-br`,
 // }
 
-// LayoutResolver.propTypes = {
+// SeoResolver.propTypes = {
 //   lang: PropTypes.string,
 //   // meta: PropTypes.arrayOf(PropTypes.object),
 //   // title: PropTypes.string.isRequired,
 // }
 
-export default LayoutResolver
+export default SeoResolver
