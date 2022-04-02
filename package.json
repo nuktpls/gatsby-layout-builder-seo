@@ -42,5 +42,8 @@
       ],
       "@semantic-release/github"
     ]
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.22.0"
   }
 }

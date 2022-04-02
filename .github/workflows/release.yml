@@ -33,4 +33,5 @@ jobs:
         env:
           PREFIX_PATHS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
