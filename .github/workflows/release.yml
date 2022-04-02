@@ -27,11 +27,24 @@ jobs:
       # Build the site
       - name: Install npm packages
         run: npm i
+
       - name: Build NÜ-SEO plugin
         run: npm run build -w gatsby-plugin-nu-seo
+
+      - name: Create release pull request or publish to npm
+        id: changesets
+        uses: changesets/action@master
+        with:
+          title: Release Tracking
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Release v.
         run: npx semantic-release
         env:
           PREFIX_PATHS: true
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
