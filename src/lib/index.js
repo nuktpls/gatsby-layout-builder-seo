@@ -3,10 +3,10 @@
 */
 
 import React from 'react'
-import SeoAgentResolver from './src/nu_modules/layout/containers'
+import LayoutResolver from './src/nu_modules/layout/containers'
 
 const SeoContainer = ({ opt }) => {
-  return <SeoAgentResolver opt={opt} />
+  return <LayoutResolver opt={opt} />
 }
 
 export default SeoContainer
