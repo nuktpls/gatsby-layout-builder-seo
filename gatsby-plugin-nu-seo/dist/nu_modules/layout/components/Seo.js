@@ -51,55 +51,55 @@ const Seo = _ref => {
   const cardImagesrc = servBar + cardImage || servBar || cardImage;
   const metaTags = [{
     name: 'description',
-    data: metaDescription
+    data: metaDescription || null
   }, {
     name: 'image',
-    data: cardImagesrc || image
+    data: cardImagesrc || image || null
   }, {
     name: 'keywords',
-    data: keywords.map(e => e)
+    data: (keywords === null || keywords === void 0 ? void 0 : keywords.map(e => e)) || null
   }, {
     name: 'og:url',
-    data: serverUrl
+    data: serverUrl || null
   }, {
     name: 'og:type',
-    data: schemaType ? 'article' : 'blog'
+    data: schemaType ? 'article' : 'blog' || null
   }, {
     name: 'og:title',
-    data: title
+    data: title || null
   }, {
     name: 'og:description',
-    data: description
+    data: description || null
   }, {
     name: 'og:image',
-    data: cardImagesrc || image
+    data: cardImagesrc || image || null
   }, {
     name: 'fb:app_id',
-    data: social.fbAppID
+    data: (social === null || social === void 0 ? void 0 : social.fbAppID) || null
   }, {
     name: 'twitter:card',
-    data: summary_large_image
+    data: summary_large_image || null
   }, {
     name: 'twitter:creator',
-    data: social.twitter
+    data: (social === null || social === void 0 ? void 0 : social.twitter) || null
   }, {
     name: 'twitter:title',
-    data: title
+    data: title || null
   }, {
     name: 'twitter:description',
-    data: description
+    data: description || null
   }, {
     name: 'twitter:image:src',
-    data: cardImagesrc || image
+    data: cardImagesrc || image || null
   }, {
     name: 'theme-color',
-    data: themeColor || '#FF0081'
+    data: themeColor || '#FF0081' || null
   }, {
     name: 'twitter:site',
-    data: "@" + social.twitter
+    data: "@" + (social === null || social === void 0 ? void 0 : social.twitter) || null
   }, {
     name: 'author',
-    data: author
+    data: author || null
   }];
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactHelmet.default, {
     htmlAttributes: {
@@ -109,7 +109,7 @@ const Seo = _ref => {
   }, /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("link", {
     rel: "canonical",
     href: serverUrl
-  }), metaTags.map((meta, indx) => {
+  }), metaTags === null || metaTags === void 0 ? void 0 : metaTags.map((meta, indx) => {
     if (!meta.data) {
       return null;
     }

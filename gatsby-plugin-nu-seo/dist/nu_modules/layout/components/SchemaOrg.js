@@ -69,7 +69,7 @@ var _default = /*#__PURE__*/_react.default.memo(_ref => {
     description: brandDescription,
     url: brandUrl,
     potentialAction: 'Learning',
-    keywords: [keywords.map(e => e)],
+    keywords: [keywords === null || keywords === void 0 ? void 0 : keywords.map(e => e)],
     inLanguage: inLanguage,
     copyrightYear: new Date().getFullYear(),
     datePublished: dateCreated,

@@ -12,4 +12,3 @@ public
 .idea
 !.vscode/*
 !*.code-workspace
-!.github/*
