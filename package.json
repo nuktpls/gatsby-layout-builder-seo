@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-layout-builder-seo",
-  "version": "0.4.1",
+  "name": "gatsby-layout-builder-seo-workspace",
+  "version": "0.4.6",
   "workspaces": [
     "demo",
-    "gatsby-plugin-nu-seo"
+    "gatsby-layout-builder-seo"
   ],
   "private": true,
   "description": "Gatsby Layout Builder - SEO.",
@@ -24,7 +24,8 @@
     "build": "npm run build -w demo",
     "clean": "npm run clean -w demo",
     "develop": "npm run develop -w demo",
-    "version": "./build-docs && git add docs"
+    "version": "./build-docs && git add docs",
+    "coverage": "nyc --reporter=text npm run test"
   },
   "repository": {
     "type": "git",
@@ -35,38 +36,13 @@
     "access": "public",
     "@nuktpls:registry": "https://npm.pkg.github.com"
   },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "gatsby-plugin-nu-seo",
-          "npmPublish": true,
-          "tarballDir": "gatsby-plugin-nu-seo/dist"
-        }
-      ],
-      "@semantic-release/github"
-    ]
-  },
-  "verifyConditions": [
-    {
-      "path": "semantic-release-verify-deps",
-      "dependencies": true,
-      "devDependencies": false,
-      "regExps": [
-        "\\D$"
-      ]
-    }
-  ],
   "dependencies": {
     "@changesets/cli": "^2.22.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@semantic-release/npm": "^9.0.1",
-    "nyc": "^15.1.0"
+    "@babel/core": "^7.17.9",
+    "babel-preset-gatsby": "^2.11.1",
+    "identity-obj-proxy": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/nuktpls/gatsby-layout-builder-seo/issues"

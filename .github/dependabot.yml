@@ -11,7 +11,7 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/gatsby-plugin-nu-seo" # Location of package manifests
+    directory: "/gatsby-layout-builder-seo" # Location of package manifests
     schedule:
       interval: "weekly"
 

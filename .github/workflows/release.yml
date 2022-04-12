@@ -29,7 +29,7 @@ jobs:
         run: npm i
 
       - name: Build NÜ-SEO plugin
-        run: npm run build -w gatsby-plugin-nu-seo
+        run: npm run build -w gatsby-layout-builder-seo
 
       - name: Create release pull request or publish to npm
         id: changesets
