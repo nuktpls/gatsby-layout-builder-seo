@@ -65,6 +65,7 @@ const Seo = ({
   websiteLanguage,
   pageTitle,
   buildServerUrl,
+  actualPage,
   metaTags,
   preSchema,
 }) => {
@@ -75,7 +76,7 @@ const Seo = ({
         titleTemplate={`%s | ${pageTitle}`}
       >
         <title>{pageTitle}</title>
-        <link rel="canonical" href={buildServerUrl} />
+        <link rel="canonical" href={actualPage} />
         {metaTags?.map((meta, indx) => {
           if (meta.data === null) {
             return null

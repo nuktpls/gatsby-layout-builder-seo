@@ -1,6 +1,6 @@
 {
   "name": "gatsby-layout-builder-seo-workspace",
-  "version": "0.4.6",
+  "version": "0.4.8",
   "workspaces": [
     "demo",
     "gatsby-layout-builder-seo"

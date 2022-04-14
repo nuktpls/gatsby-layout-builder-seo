@@ -47,11 +47,13 @@ const SeoResolver = _ref => {
   const websiteDescription = opt !== null && opt !== void 0 && opt.websiteDescription ? opt.websiteDescription : null;
   const pageKeywords = opt !== null && opt !== void 0 && opt.pageKeywords ? opt.pageKeywords : null;
   const postHeadline = opt !== null && opt !== void 0 && opt.postHeadline ? opt.postHeadline : null;
+  const actualPage = opt !== null && opt !== void 0 && opt.actualPage ? opt.actualPage : null;
   const preSchema = {
     websiteInfo: {
       schemaType: schemaType,
       authorWebsiteData: authorWebsiteData,
       buildServerUrl: buildServerUrl,
+      actualPage: actualPage,
       websiteLanguage: websiteLanguage,
       highlightImageSrc: highlightImageSrc,
       alternativeImage: alternativeImage,
@@ -99,7 +101,7 @@ const SeoResolver = _ref => {
     data: keywords === null || keywords === void 0 ? void 0 : keywords.map(e => e)
   }, {
     name: 'og:url',
-    data: preSchema === null || preSchema === void 0 ? void 0 : (_preSchema$websiteInf10 = preSchema.websiteInfo) === null || _preSchema$websiteInf10 === void 0 ? void 0 : _preSchema$websiteInf10.buildServerUrl
+    data: (preSchema === null || preSchema === void 0 ? void 0 : (_preSchema$websiteInf10 = preSchema.websiteInfo) === null || _preSchema$websiteInf10 === void 0 ? void 0 : _preSchema$websiteInf10.buildServerUrl) + actualPage
   }, {
     name: 'og:type',
     data: preSchema !== null && preSchema !== void 0 && (_preSchema$websiteInf11 = preSchema.websiteInfo) !== null && _preSchema$websiteInf11 !== void 0 && _preSchema$websiteInf11.schemaType ? 'article' : 'blog'
@@ -165,6 +167,7 @@ const SeoResolver = _ref => {
     websiteLanguage: websiteLanguage,
     pageTitle: pageTitle,
     buildServerUrl: buildServerUrl,
+    actualPage: actualPage,
     metaTags: metaTags,
     preSchema: preSchema
   });

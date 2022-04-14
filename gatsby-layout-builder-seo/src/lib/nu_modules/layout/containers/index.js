@@ -38,12 +38,13 @@ const SeoResolver = ({ opt }) => {
     : null
   const pageKeywords = opt?.pageKeywords ? opt.pageKeywords : null
   const postHeadline = opt?.postHeadline ? opt.postHeadline : null
-
+  const actualPage = opt?.actualPage ? opt.actualPage : null
   const preSchema = {
     websiteInfo: {
       schemaType: schemaType,
       authorWebsiteData: authorWebsiteData,
       buildServerUrl: buildServerUrl,
+      actualPage: actualPage,
       websiteLanguage: websiteLanguage,
       highlightImageSrc: highlightImageSrc,
       alternativeImage: alternativeImage,
@@ -108,7 +109,10 @@ const SeoResolver = ({ opt }) => {
         preSchema?.brandInfo?.brandMainLogoSrc,
     },
     { name: 'keywords', data: keywords?.map(e => e) },
-    { name: 'og:url', data: preSchema?.websiteInfo?.buildServerUrl },
+    {
+      name: 'og:url',
+      data: preSchema?.websiteInfo?.buildServerUrl + actualPage,
+    },
     {
       name: 'og:type',
       data: preSchema?.websiteInfo?.schemaType ? 'article' : 'blog',
@@ -195,6 +199,7 @@ const SeoResolver = ({ opt }) => {
       websiteLanguage={websiteLanguage}
       pageTitle={pageTitle}
       buildServerUrl={buildServerUrl}
+      actualPage={actualPage}
       metaTags={metaTags}
       preSchema={preSchema}
     />

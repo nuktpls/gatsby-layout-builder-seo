@@ -76,6 +76,7 @@ const Seo = _ref => {
     websiteLanguage,
     pageTitle,
     buildServerUrl,
+    actualPage,
     metaTags,
     preSchema
   } = _ref;
@@ -86,7 +87,7 @@ const Seo = _ref => {
     titleTemplate: "%s | ".concat(pageTitle)
   }, /*#__PURE__*/_react.default.createElement("title", null, pageTitle), /*#__PURE__*/_react.default.createElement("link", {
     rel: "canonical",
-    href: buildServerUrl
+    href: actualPage
   }), metaTags === null || metaTags === void 0 ? void 0 : metaTags.map((meta, indx) => {
     if (meta.data === null) {
       return null;
