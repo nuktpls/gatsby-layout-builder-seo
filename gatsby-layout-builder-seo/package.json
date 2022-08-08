@@ -50,7 +50,7 @@
     "react-helmet": "^6.1.0",
     "web-vitals": "^2.1.4",
     "gatsby-plugin-sharp": "4.11.1",
-    "gatsby-transformer-sharp": "4.11.0"
+    "gatsby-transformer-sharp": "4.20.0"
   },
   "peerDependencies": {
     "gatsby": "^4.11.2",
